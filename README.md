@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/hyprstack/animal-vital-sign-reader.svg?branch=master)](https://travis-ci.org/hyprstack/animal-vital-sign-reader)
 # Animal Vitality Sensor App
 
 __This project aims at using a low-cost, small, easily transportable, flexible and easily programmed compound component of computer and sensor, to create a real-time vitality sensor app aimed at the monitoring the vitals signs of high performance sport animals, namely show-jumping and race horses, as to prevent deaths caused by uncaught illnesses. This application aims at reporting directly to a designated device (mobile, laptop, tablet, pc, etc.) with an alert if there is a spike in any vital signs.__
