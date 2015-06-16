@@ -21,7 +21,7 @@ For the front-end I will be implementing a `Backbone` framework, using either `H
 
 ###### Language
 
-The chosen language for the __backend__ will be `Nodejs`.
+The chosen language for the __backend__ will be `Nodejs` and I will be using `hapi.js` as a framework for my api.
 
 ###### Database/Infrastructure
 
