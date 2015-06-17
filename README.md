@@ -7,7 +7,7 @@ __This project aims at using a low-cost, small, easily transportable, flexible a
 
 ### Hardware
 
-For the hardware I will begin the project with a `raspberry-pi`, as this follows the low cost approach I intend to implement. This component also comes with the advantage that it is easy to program and is compatible with `nodejs`. I have not yet chosen any sensor pads, and further research needs to be done in this area. 
+For the hardware I will begin the project with a `raspberry-pi` or `arduino`, as this follows the low cost approach I intend to implement. This component also comes with the advantage that it is easy to program and is compatible with `nodejs`. As for sensors, there are a few options:[heart-rate pad](http://pulsesensor.com/), [Raspberry PI with Ant](http://www.johannesbader.ch/2014/06/track-your-heartrate-on-raspberry-pi-with-ant/) and [adafruit](https://www.adafruit.com/products/1077). 
 
 ___
 
@@ -29,7 +29,8 @@ At an initial stage all backend infrastructure will be held on `Couchbase` and r
 
 #### Unit Testing
 
-All code in this project will be tested using the well supported frameworks and basic construct of `Mocha`, `Chai` and `Sinon`.
+All front-end code in this project will be tested using the well supported frameworks and basic construct of `Mocha`, `Chai` and `Sinon`.
+Backend will use the tools provided by the `hapi` framework, `joi` and `lab`.
 
 #### Continuous Integration
 

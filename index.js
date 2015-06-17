@@ -13,9 +13,11 @@ server.connection({port: process.env.PORT || 8080});
 
 server.route(rs);
 
-server.start(function(){
-    console.log("Server started: " + server.info.uri);
-});
+if(!module.parent) {
+    server.start(function(){
+        console.log("Server started: " + server.info.uri);
+    });
+}
 
 module.exports = server;
 
