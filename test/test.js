@@ -23,10 +23,11 @@ describe("Landing page", function () {
 
         server.inject(options, function(response) {
             var result = response.result;
+            var headers = response.headers;
 
             expect(response.statusCode).to.equal(200);
+            expect(headers['content-type']).to.equal('text/html; charset=utf-8');
             expect(result).contains("<!DOCTYPE html>");
-            expect(result).contains("AVSR");
             done();
         });
     });
