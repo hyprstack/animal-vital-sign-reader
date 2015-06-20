@@ -1,0 +1,9 @@
+body {
+    background-color: #dddddd;
+    width: auto;
+}
+
+header#page-header {
+    color: #8F6B00;
+    background: #111111;
+}
