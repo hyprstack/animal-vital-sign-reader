@@ -26,7 +26,7 @@ describe("Landing page", function () {
 
             expect(response.statusCode).to.equal(200);
             expect(result).contains("<!DOCTYPE html>");
-            expect(result).contains("This is a test page!");
+            expect(result).contains("AVSR");
             done();
         });
     });
