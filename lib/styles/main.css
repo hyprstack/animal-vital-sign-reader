@@ -4,6 +4,9 @@ body {
 }
 
 header#page-header {
-    color: #8F6B00;
+    color: #208120;
     background: #111111;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
