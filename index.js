@@ -4,13 +4,15 @@
 'use strict';
 
 var Hapi = require('hapi');
-var rs = require('./lib/routes/routes.js');
-var Path = require('path');
+var Rs = require('./lib/routes/routes.js');
 
 
 var server = new Hapi.Server();
 
-server.connection({port: process.env.PORT || 8080});
+server.connection({
+    port: process.env.PORT || 8080,
+    host: 'localhost'
+});
 
 server.views({
     engines: {
@@ -21,11 +23,12 @@ server.views({
     layoutPath: './lib/templates'
 });
 
-server.route(rs);
+server.route(Rs);
 
-if(!module.parent) {
-    server.start(function(){
-        console.log("Server started: " + server.info.uri);
+if (!module.parent) {
+
+    server.start(function () {
+        console.log('Server started: ' + server.info.uri);
     });
 }
 

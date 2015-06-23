@@ -25,7 +25,7 @@ The chosen language for the __backend__ will be `Nodejs` and I will be using `ha
 
 ###### Database/Infrastructure
 
-At an initial stage all backend infrastructure will be held on `Couchbase` and run on `Heroku`, later moving to `AWS` when the project proves viable.
+At an initial stage all backend infrastructure will be held on `Couchbase` and run on `Heroku`, or/later [moving to] `AWS`'s [when the project proves viable] `dynamoDB`.
 
 #### Unit Testing
 
@@ -35,6 +35,11 @@ Backend will use the tools provided by the `hapi` framework, `joi` and `lab`.
 #### Continuous Integration
 
 `Travis` although something like `CircleCI` or `Codeship` might be considered further down the line as they support __Continuous Deployment__ too. [See here](http://www.quora.com/What-is-the-difference-between-Bamboo-CircleCI-CIsimple-Ship-io-Codeship-Jenkins-Hudson-Semaphoreapp-Shippable-Solano-CI-TravisCI-and-Wercker?share=1) for various opinions of these tools.
+
+
+#### CDN
+
+I will be using amazon's `cloud front` for my [CDN](https://en.wikipedia.org/wiki/Content_delivery_network).
 
 ___
 

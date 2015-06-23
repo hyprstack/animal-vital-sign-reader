@@ -12,22 +12,23 @@ var before = lab.before;
 var after = lab.after;
 var expect = Code.expect;
 
-var server = require("../");
+var Server = require('../index.js');
 
-describe("Landing page", function () {
-    it("returns a 200 statusCode and an html file", function (done) {
+describe('Landing page', function () {
+    it('returns a 200 statusCode and an html file', function (done) {
+
         var options = {
-            method: "GET",
-            url: "/"
+            method: 'GET',
+            url: '/'
         };
 
-        server.inject(options, function(response) {
+        Server.inject(options, function (response) {
             var result = response.result;
             var headers = response.headers;
 
             expect(response.statusCode).to.equal(200);
             expect(headers['content-type']).to.equal('text/html; charset=utf-8');
-            expect(result).contains("<!DOCTYPE html>");
+            expect(result).contains('<!DOCTYPE html>');
             done();
         });
     });
