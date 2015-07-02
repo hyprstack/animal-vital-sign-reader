@@ -27,6 +27,7 @@
   "dependencies": {
     "handlebars": "^3.0.3",
     "hapi": "^8.6.1",
+    "hapi-auth-cookie": "^3.0.1",
     "underscore": "^1.8.3"
   }
 }
