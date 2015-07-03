@@ -52,7 +52,8 @@ server.views({
     relativeTo: __dirname,
     path: './lib/templates',
     partialsPath: './lib/templates/partials',
-    layoutPath: './lib/templates/layout'
+    layoutPath: './lib/templates/layout',
+    layout: true
 });
 
 // Load plugins
