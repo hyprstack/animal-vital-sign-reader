@@ -19,11 +19,17 @@
 
 <body>
 
-{{> header}}
+    <div id="container">
 
-{{{content}}}
+        {{> header}}
 
-{{> footer}}
+        {{{content}}}
+
+        <div id="footer">
+            {{> footer}}
+        </div>
+
+    </div>
 
 </body>
 </html>
