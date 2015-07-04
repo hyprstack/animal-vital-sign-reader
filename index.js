@@ -8,31 +8,24 @@ var Rs = require('./lib/routes/routes.js');
 var AuthCookie = require('hapi-auth-cookie');
 var Joi = require('joi');
 
-// Our fake User database - TODO: replace with real database once user authentication is working
-var users = {
-    leet: {
-        password: 'haxor',
-        name: 'Leet Haxor'
-    }
-};
 
-var validate = function (request, reply) {
-
-    var username = request.payload.username;
-    var password = request.payload.password;
-
-    var user = users[username];
-    var isValid = user && user.password === password;
-
-    if (!isValid) {
-        return reply().redirect('/login');
-    }
-
-    var credentials = { name: user.name } // Will be accessible in request.auth.credentials
-
-    request.auth.session.set(credentials);
-    return reply('Logged In');
-};
+//var validate = function (request, reply) {
+//
+//    var username = request.payload.username;
+//    var password = request.payload.password;
+//
+//    var user = users[username];
+//    var isValid = user && user.password === password;
+//
+//    if (!isValid) {
+//        return reply().redirect('/login');
+//    }
+//
+//    var credentials = { name: user.name } // Will be accessible in request.auth.credentials
+//
+//    request.auth.session.set(credentials);
+//    return reply('Logged In');
+//};
 
 
 var server = new Hapi.Server();
@@ -63,9 +56,10 @@ server.register(AuthCookie, function (err) {
     var authOptions = {
         password: 'secret',
         cookie: 'NameOfCookie',
+        ttl: 3*60*1000,
         redirectTo: '/login',
         isSecure: false,
-        validateFunc: validate
+        //validateFunc: validate
     };
 
     server.auth.strategy('sessionCookie', 'cookie', authOptions);
