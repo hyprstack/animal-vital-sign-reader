@@ -1,3 +1,5 @@
+/**** Landing page and general layout ****/
+
 html, body {
     background-color: #F0FFFF;
     margin: 0;
@@ -75,4 +77,24 @@ div#footer {
 
 p.footer-p {
     margin: .3rem;
+}
+
+/*** Log-in Form ***/
+
+input#post-name {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+input#post-password {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+input#submit-button {
+    display: block;
+    text-align: center;
+    margin: auto;
 }
