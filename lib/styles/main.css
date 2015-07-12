@@ -81,6 +81,13 @@ p.footer-p {
 
 /*** Log-in Form ***/
 
+p#invalid-user-pass-msg {
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: red;
+}
+
 input#post-name {
     display: block;
     text-align: center;

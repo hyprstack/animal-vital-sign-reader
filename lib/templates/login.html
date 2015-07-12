@@ -2,4 +2,7 @@
     <input id="post-name" class="log-in-input-fields" type="text" name="username" placeholder="username"/>
     <input id="post-password" class="log-in-input-fields" type="text" name="password" placeholder="password"/>
     <input id="submit-button" class="log-in-input-fields" type="submit" value="Login"/>
+    {{#if message}}
+    <p id="invalid-user-pass-msg">{{message}}</p>
+    {{/if}}
 </form>
